@@ -18,7 +18,8 @@ var gulp         = require('gulp'),
 		pngquant     = require('imagemin-pngquant'),
 		cheerio      = require('gulp-cheerio'),
 		run          = require('run-sequence'),  //запуск тасков последовательно
-		del          = require('del');
+		del          = require('del'),
+		svgSymbols 	 = require('gulp-svg-symbols');
 
 
 // Сборка стилей
@@ -55,8 +56,9 @@ gulp.task('common-js', function() {
 
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js', // сюда добавляем библиотеки
-		//'app/js/common.min.js', // Всегда в конце, раскоментить, если хотим склеить весь js, удалить подключение common.js в index.html
+		'app/js/menu.js',
+		'app/js/picturefill.js',
+		'app/js/slider.js'
 		])
 	.pipe(plumber())
 	.pipe(concat('scripts.min.js'))
@@ -82,7 +84,7 @@ gulp.task('img', function () {
 
 // Сборка SVG-спрайта
 gulp.task('svgstore', function (callback) {
-	var spritePath = 'app/img/svg-sprite';
+	var spritePath = 'app/img/vector/sprite';
 	if(fileExist(spritePath) !== false) {
 		return gulp.src(spritePath + '/*.svg')
 			.pipe(svgmin(function (file) {
@@ -99,13 +101,20 @@ gulp.task('svgstore', function (callback) {
 				$('svg').attr('style',  'display:none');
 			}))
 			.pipe(rename('sprite-svg.svg'))
-			.pipe(gulp.dest('build/img/'));
+			.pipe(gulp.dest('app/img/'));
 	}
 	else {
 		console.log('Нет файлов для сборки SVG-спрайта');
 		callback();
 	}
 });
+
+gulp.task('sprite', function() {
+  return gulp
+    .src('app/img/sprite/*.svg')
+    .pipe(svgSymbols())
+    .pipe(gulp.dest('app/img'))
+})
 
 
 // Копирование шрифтов, скриптов, SVG-спрайтов и html

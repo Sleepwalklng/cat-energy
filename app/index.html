@@ -4,17 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи - Главная</title>
-    <link rel="preload" href="css/style.min.css" as="style">
-    <link rel="preload" href="js/main.min.js" as="script">
-    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
-    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
-  <div style="display: none">
-    <include src="build/img/vector/sprite.svg"></include>
-  </div>
 
   <header class="page-header page-header--index">
     <div class="page-header__wrapper container">
@@ -25,7 +17,7 @@
           <img class="page-logo__image" src="img/vector/logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
         </picture>
         <svg class="page-logo__title page-logo__title--header" xmlns="http://www.w3.org/2000/svg" width="101" height="18" aria-label="Cat Energy">
-          <use xlink:href="#logo-mobile-header"></use>
+          <use xlink:href="sprite#logo-mobile-header"></use>
         </svg>
       </a>
       <nav class="page-nav page-nav--no-js">
@@ -46,11 +38,8 @@
           Занялся собой? Займись котом!
         </p>
         <picture class="intro__image-wrapper">
-          <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/index-can-desktop@1x.webp 1x, img/webp/index-can-desktop@2x.webp 2x">
           <source media="(min-width: 1300px)" srcset="img/raster/index-can-desktop@1x.png 1x, img/raster/index-can-desktop@2x.png 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/index-can-tablet@1x.webp 1x, img/webp/index-can-tablet@2x.webp 2x">
           <source media="(min-width: 768px)" srcset="img/raster/index-can-tablet@1x.jpg 1x, img/raster/index-can-tablet@2x.jpg 2x">
-          <source type="image/webp" srcset="img/webp/index-can-mobile@1x.webp 1x, img/webp/index-can-mobile@2x.webp 2x">
           <img class="intro__image" src="img/raster/index-can-mobile@1x.png" srcset="img/raster/index-can-mobile@2x.png 2x" alt="Внешний вид товара" width="280" height="270">
         </picture>
         <a class="intro__content intro__btn theme__btn" href="form.html">
@@ -148,21 +137,15 @@
           <div class="slider__images">
             <div class="slider__image slider__image--before">
               <picture>
-                <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/before-desktop@1x.webp 1x, img/webp/before-desktop@2x.webp 2x">
                 <source media="(min-width: 1300px)" srcset="img/raster/before-desktop@1x.png 1x, img/raster/before-desktop@2x.png 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/before-tablet@1x.webp 1x, img/webp/before-tablet@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/raster/before-tablet@1x.png 1x, img/raster/before-tablet@2x.png 2x">
-                <source type="image/webp" srcset="img/webp/before-mobile@1x.webp 1x, img/webp/before-mobile@2x.webp 2x">
                 <img src="img/raster/before-mobile@1x.png" srcset="img/raster/before-mobile@2x.png 2x" width="320" height="240" alt="Толстый кот">
               </picture>
             </div>
             <div class="slider__image slider__image--after">
               <picture>
-                <source type="image/webp" media="(min-width: 1300px)" srcset="img/webp/after-desktop@1x.webp 1x, img/webp/after-desktop@2x.webp 2x">
                 <source media="(min-width: 1300px)" srcset="img/raster/after-desktop@1x.png 1x, img/raster/after-desktop@2x.png 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/after-tablet@1x.webp 1x, img/webp/after-tablet@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/raster/after-tablet@1x.png 1x, img/raster/after-tablet@2x.png 2x">
-                <source type="image/webp" srcset="img/webp/after-mobile@1x.webp 1x, img/webp/after-mobile@2x.webp 2x">
                 <img src="img/raster/after-mobile@1x.png" srcset="img/raster/after-mobile@2x.png 2x" width="320" height="240" alt="Худой кот">
               </picture>
             </div>
@@ -199,7 +182,7 @@
       <div class="page-footer__item page-logo page-logo--index page-logo--footer">
         <a class="page-logo__title">
           <svg xmlns="http://www.w3.org/2000/svg" width="128" height="24" aria-label="Cat Energy">
-            <use xlink:href="#logo-footer"></use>
+            <use xlink:href="sprite.svg#logo-footer"></use>
           </svg>
         </a>
       </div>
@@ -207,23 +190,23 @@
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="socials__list">
           <li class="socials__item">
-            <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy">Вконтакте
+            <a class="socials__link socials__link--vk" href="#">Вконтакте
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22">
-                <use xlink:href="#icon-vk-mobile"></use>
+                <use xlink:href="sprite.svg#icon-vk-mobile"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--ig" href="https://www.instagram.com/htmlacademy">Instagram
+            <a class="socials__link socials__link--ig" href="#">Instagram
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-                <use xlink:href="#icon-insta-mobile"></use>
+                <use xlink:href="sprite.svg#icon-insta-mobile"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--fb" href="https://www.facebook.com/htmlacademy">Facebook
+            <a class="socials__link socials__link--fb" href="#">Facebook
               <svg xmlns="http://www.w3.org/2000/svg" width="10" height="19">
-                <use xlink:href="#icon-fb-mobile"></use>
+                <use xlink:href="sprite.svg#icon-fb-mobile"></use>
               </svg>
             </a>
           </li>
@@ -231,19 +214,19 @@
       </section>
       <section class="page-footer__item rights-owner">
         <h2 class="visually-hidden">Правообладатель</h2>
-        <a class="rights-owner__link" href="https://htmlacademy.ru/intensive/adaptive">
-          HTML Academy
+        <a class="rights-owner__link" href="#">
+          Учебный макет: HTML Academy
           <svg class="rights-owner__logo" xmlns="http://www.w3.org/2000/svg" width="26.94" height="34.09">
-            <use xlink:href="#logo-htmlacademy"></use>
+            <use xlink:href="sprite.svg#logo-htmlacademy"></use>
           </svg>
         </a>
       </section>
     </div>
   </footer>
 
-  <script src="js/main.min.js"></script>
-  <script src="js/slider.min.js"></script>
-  <script src="js/libs/picturefill.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/picturefill.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCubo6pvzkH1-z6BaeX_Dwz8SFaJXid5uM&callback=initialize" async defer></script>
   </body>
 </html>

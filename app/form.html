@@ -4,17 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи - Подбор программы</title>
-    <link rel="preload" href="css/style.min.css" as="style">
-    <link rel="preload" href="js/main.min.js" as="script">
-    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
-    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-
-  <div style="display: none">
-    <include src="build/img/vector/sprite.svg"></include>
-  </div>
 
   <header class="page-header">
     <div class="page-header__wrapper container">
@@ -25,7 +17,7 @@
           <img class="page-logo__image" src="img/vector/logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
         </picture>
         <svg class="page-logo__title page-logo__title--header" xmlns="http://www.w3.org/2000/svg" width="101" height="18" aria-label="Cat Energy">
-          <use xlink:href="#logo-mobile-header"></use>
+          <use xlink:href="sprite.svg#logo-mobile-header"></use>
         </svg>
       </a>
       <nav class="page-nav page-nav--no-js">
@@ -107,7 +99,7 @@
               <span class="form-unit__input-wrapper">
                 <input type="email" class="form-unit__input" name="E-mail" placeholder="kuklachev@gmail.com" required>
                 <svg class="form-unit__icon" xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13">
-                  <use xlink:href="#icon-mail"></use>
+                  <use xlink:href="sprite.svg#icon-mail"></use>
                 </svg>
               </span>
             </label>
@@ -118,7 +110,7 @@
               <span class="form-unit__input-wrapper">
                 <input type="tel" class="form-unit__input" name="Телефон" placeholder="8 (960) 900-60-90" required>
                 <svg class="form-unit__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                  <use xlink:href="#icon-phone"></use>
+                  <use xlink:href="sprite.svg#icon-phone"></use>
                 </svg>
               </span>
             </label>
@@ -197,7 +189,7 @@
       <div class="page-footer__item page-logo page-logo--footer">
         <a href="index.html" class="page-logo__title">
           <svg xmlns="http://www.w3.org/2000/svg" width="128" height="24" aria-label="Cat Energy">
-            <use xlink:href="#logo-footer"></use>
+            <use xlink:href="sprite.svg#logo-footer"></use>
           </svg>
         </a>
       </div>
@@ -205,23 +197,23 @@
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="socials__list">
           <li class="socials__item">
-            <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy">Вконтакте
+            <a class="socials__link socials__link--vk" href="#">Вконтакте
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22">
-                <use xlink:href="#icon-vk-mobile"></use>
+                <use xlink:href="sprite.svg#icon-vk-mobile"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--ig" href="https://www.instagram.com/htmlacademy">Instagram
+            <a class="socials__link socials__link--ig" href="#">Instagram
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-                <use xlink:href="#icon-insta-mobile"></use>
+                <use xlink:href="sprite.svg#icon-insta-mobile"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
-            <a class="socials__link socials__link--fb" href="https://www.facebook.com/htmlacademy">Facebook
+            <a class="socials__link socials__link--fb" href="#">Facebook
               <svg xmlns="http://www.w3.org/2000/svg" width="10" height="19">
-                <use xlink:href="#icon-fb-mobile"></use>
+                <use xlink:href="sprite.svg#icon-fb-mobile"></use>
               </svg>
             </a>
           </li>
@@ -229,10 +221,10 @@
       </section>
       <section class="page-footer__item rights-owner">
         <h2 class="visually-hidden">Правообладатель</h2>
-        <a class="rights-owner__link" href="https://htmlacademy.ru/intensive/adaptive">
-          HTML Academy
+        <a class="rights-owner__link" href="#">
+          Учебный макет: HTML Academy
           <svg class="rights-owner__logo" xmlns="http://www.w3.org/2000/svg" width="26.94" height="34.09">
-            <use xlink:href="#logo-htmlacademy"></use>
+            <use xlink:href="sprite.svg#logo-htmlacademy"></use>
           </svg>
         </a>
       </section>
@@ -240,7 +232,7 @@
   </footer>
 
   <script src="js/main.min.js"></script>
-  <script src="js/libs/picturefill.min.js"></script>
+  <script src="js/picturefill.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCubo6pvzkH1-z6BaeX_Dwz8SFaJXid5uM&callback=initialize" async defer></script>
   </body>
 </html>
